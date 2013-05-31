@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.adduser {
+  background-color: #fff;
+  padding: 10px 20px
+}
+
+.adduser .u_list>li>a>cite,.hint-list ul a {
+  cursor: pointer
+}
+
+.adduser #addform {
+  margin-bottom: 0px
+}
+
+#addform .addctl {
+  position: relative
+}
+
+.hint-list {
+  position: absolute;
+  top: 30px;
+  background-color: #fff;
+  left: -30px;
+  height: 200px;
+  overflow: auto;
+  display: none;
+  border: solid #ddd 1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px
+}
+
+.hint-list ul a {
+  padding: 2px 15px;
+}

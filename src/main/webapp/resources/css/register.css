@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+body,input,select,button,textarea {
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti,
+    sans-serif;
+}
+
+body {
+  background-color: #3fa7cb;
+}
+
+legend {
+  font-size: 18px;
+  border-bottom-color: #ccc;
+}
+
+.head {
+  padding: 16px 20px 12px;
+}
+
+.logo {
+  display: block;
+  width: 140px;
+  height: 28px;
+  background: url(../img/otp-logo.png) no-repeat 0 0;
+}
+
+legend+.face-row {
+  margin-top: 36px;
+}
+
+.img-face {
+  width: 48px;
+  height: 48px;
+  margin-top: -16px;;
+}
+
+.well {
+  background: url("../images/bg.jpg");
+}
+
+.control-label>.text-error {
+  color: red;
+}
+
+.controls .input-underline,.controls .input-underline:focus {
+  border: none;
+  border-bottom: solid #333 1px;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0 3px;
+  margin: 5px 0;
+  box-shadow: none;
+  outline: 0;
+}
+
+.rsp {
+  margin-right: 10px;
+}
+
+.page-footer {
+  text-align: center;
+  margin-top: 20px;
+  border-top: solid #eee 1px;
+  padding-top: 20px;
+}
+
+.alert .dl-horizontal {
+  margin-bottom: 10px;
+}
+
+.tile-return {
+  position: relative;
+  float: right;
+  display: block;
+  font-size: 20px;
+  color: #666;
+  margin: 0;
+  padding: 10px;
+  background: url(../img/metro/back_32x32.png) left no-repeat;
+  text-align: right;
+  line-height: 32px;
+  width: 110px;
+  height: 32px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.tile-return:hover {
+  color: #fff;
+  background: #3fa7cb url(../img/metro/back-white_32x32.png) left no-repeat;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  text-decoration: none;
+}

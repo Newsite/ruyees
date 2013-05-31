@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+body {
+  background: url("../images/bg.jpg");
+}
+
+.container {
+  width: 750px;
+}
+
+.fg-color-blue {
+  color: #60a3c6 !important;
+}
+
+.border-color-blue {
+  border-color: #60a3c6 !important;
+}
+
+.outline-color-blue {
+  outline-color: #00aeef !important;
+}
+
+.tile,.tile-main {
+  display: block;
+  float: left;
+  position: relative;
+  margin: 0 10px 10px 0;
+  overflow: hidden;
+  background-color: #00aeef;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tile:hover {
+  outline: 4px #00aeef solid;
+  text-decoration: none;
+}
+
+.tile.empty,.tile.disabled {
+  background-color: transparent;
+  outline: none;
+  cursor: default;
+}
+
+.tile.disabled {
+  background-color: #a6a6a6;
+}
+
+.tile-main {
+  text-align: right;
+  cursor: default;
+  width: 290px;
+  background-color: transparent;
+}
+
+.tile-main h3 {
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti,
+    sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  color: #666;
+  font-weight: normal;
+  text-shadow: 0 1px 0 #fff;
+  margin: 50px 25px 0 0;
+}
+
+.tile-main p {
+  font-size: 12px;
+  color: #666;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.tile * {
+  color: #f5f5f5;
+}
+
+.tile h4 {
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: normal;
+  text-shadow: 0 1px 2px #000;
+}
+
+.tile img {
+  display: block;
+  margin: 29px auto 0;
+  width: 60px;
+  height: 60px;
+}

@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+body {
+  background: url("../images/bg.jpg");
+}
+
+.table {
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.table th {
+  font-size: 12px;
+}
+
+.table th,.table td {
+  border-top: 0;
+}
+
+.nav-header {
+  color: #333;
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.nav {
+  margin-bottom: 10px;
+}
+
+.nav-list>li {
+  line-height: 30px;
+}
+
+.nav-list>.active>a,.nav-list>.active>a:hover {
+  background-color: #00aeef;
+}
+
+.page-header {
+  border-bottom: 0;
+}
+
+.page-header>h4 {
+  font-weight: normal;
+}
+
+.tile-return {
+  position: relative;
+  float: right;
+  display: block;
+  font-size: 20px;
+  color: #666;
+  margin: 0;
+  padding: 10px;
+  background: #f5f5f5 url(../img/metro/back_32x32.png) left no-repeat;
+  text-align: right;
+  line-height: 32px;
+  width: 110px;
+  height: 32px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.tile-return:hover {
+  color: #fff;
+  background: #00aeef url(../img/metro/back-white_32x32.png) left no-repeat;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.btn-info {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #00aeef;
+  background-image: none;
+  border-color: #00aeef;
+}
+
+.btn-info:hover {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #00aeef;
+  background-image: none;
+  border-color: #00aeef;
+}
+
+.input-xmini {
+  width: 20px
+}
+
+.form-horizontal .control-group {
+  margin-bottom: 12px
+}
+
+.form-horizontal .controls span {
+  line-height: 30px;
+}
+
+.pa-right {
+  position: absolute;
+  right: 0;
+}
+
+#mytab .pa-right {
+  top: -5px;
+}
+
+.vmid td,.vmid th,.vmid {
+  vertical-align: middle;
+}
+
+.img-face {
+  width:48px;
+  height:48px;
+}

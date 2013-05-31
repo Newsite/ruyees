@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+.kj-btns {
+  margin-bottom: 20px
+}
+
+.kj-btns .btn {
+  width: 80px;
+  padding: 5px
+}
+
+.kj-li .thumbnail {
+  text-align: center;
+  background-color: #9da;
+  padding: 0px;
+  position: relative
+}
+
+.kj-li h6,.kj-li input[type=text] {
+  font-size: 12px;
+  margin: 50px 0;
+  line-height: 30px
+}
+
+.kj-li input[type=text] {
+  display: none;
+  line-height: 20px;
+  border-right: none;
+  border-left: none
+}
+
+.kj-li .kj-ctrl {
+  background-color: #eff
+}
+
+.kj-li .kj-ctrl a {
+  color: #990;
+  font-size: 12px;
+  line-height: 30px
+}
+
+.kj-li .kj-ctrl .comment {
+  color: #ccc
+}
+
+.del-kj {
+  display: block;
+  padding: 0 3px;
+  position: absolute;
+  top: -11px;
+  right: -11px;
+  display: none
+}
+
+.edit .del-kj,.edit input[type=text] {
+  display: block
+}
+
+.edit h6 {
+  display: none
+}

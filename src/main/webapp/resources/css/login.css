@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+body {
+  background: url("../images/bg.jpg");
+}
+
+body,input {
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti,
+    sans-serif;
+  font-size: 14px;
+}
+
+.wel-main {
+  background: url(../images/login/wel-boxbg.png) no-repeat 0 0;
+  width: 956px;
+  height: 370px;
+  position: absolute;
+  margin: -185px 0 0 -478px;
+  left: 50%;
+  top: 50%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2)
+}
+
+.login-box {
+  position: absolute;
+  top: 168px;
+  right: 68px;
+}
+
+.label-login {
+  width: 68px;
+  height: 26px;
+}
+
+#usr-input {
+  margin-bottom: 10px;
+  width: 280px;
+  height: 26px;
+}
+
+#pwd-input {
+  width: 203px;
+  height: 26px;
+}
+
+.btn-login {
+  margin-left: 3px;
+  height: 32px;
+}

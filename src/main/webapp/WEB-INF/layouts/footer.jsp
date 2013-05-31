@@ -1,0 +1,1 @@
+<%@ page language="java" pageEncoding="UTF-8" %><div class="footer">  <p class="foot-txt">Copyright &copy; 2012 Knowledge Management Center, New Oriental</p></div>

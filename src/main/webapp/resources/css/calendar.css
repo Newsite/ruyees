@@ -1,0 +1,54 @@
+@charset "utf-8";
+.ui-widget-content .ui-state-active{
+	border:1px solid #000 ;
+}
+.ui-widget-header .ui-icon {
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/glyphicons-halflings-white.png")
+}
+
+.ui-icon-circle-triangle-w {
+  background-position: -240px -96px
+}
+
+.ui-icon-circle-triangle-e {
+  background-position: -264px -96px
+}
+
+.ui-widget-content .day-notPass a {
+  background-color: #437fa4;
+  color: #fff;
+}
+
+.ui-widget-content .day-isPass a {
+  background-color: #4b8f20;
+  color: #fff;
+}
+
+.ui-datepicker-calendar thead th {
+  background-color: #cfe0ea;
+  padding: 0.3em;
+}
+
+#calendar {
+  width: 242px;
+  height: 240px;
+}
+
+#currEvent {
+  height: 207px;
+  padding: 0 15px;
+  width: 475px;
+  margin-top: 1px;
+  position: relative;
+}
+
+#currEvent .sj {
+  background-position: right -231px;
+  position: absolute;
+  top: 20px;
+  left: -19px;
+  width: 20px;
+  height: 20px;
+}

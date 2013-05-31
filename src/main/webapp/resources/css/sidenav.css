@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.sidenav>li>a {
+  font-size: 14px
+}
+
+.nav .nav {
+  margin-bottom: 0px;
+  margin-top: -1px;
+}
+
+.nav .nav-tabs.nav-stacked>li>a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding-left: 22px;
+  background-color: #eee
+}
+
+.nav .nav-tabs.nav-stacked>li>a:hover {
+  background-color: #f5f5f5
+}
