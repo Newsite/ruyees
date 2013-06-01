@@ -29,15 +29,12 @@ public final class MessageResolver {
 	 * @see org.springframework.context.MessageSource#getMessage(String,
 	 *      Object[], Locale)
 	 */
-	public static String getMessage(HttpServletRequest request, String code,
-			Object... args) {
-		WebApplicationContext messageSource = RequestContextUtils
-				.getWebApplicationContext(request);
+	public static String getMessage(HttpServletRequest request, String code, Object... args) {
+		WebApplicationContext messageSource = RequestContextUtils.getWebApplicationContext(request);
 		if (messageSource == null) {
 			throw new IllegalStateException("WebApplicationContext not found!");
 		}
-		LocaleResolver localeResolver = RequestContextUtils
-				.getLocaleResolver(request);
+		LocaleResolver localeResolver = RequestContextUtils.getLocaleResolver(request);
 		Locale locale;
 		if (localeResolver != null) {
 			locale = localeResolver.resolveLocale(request);
