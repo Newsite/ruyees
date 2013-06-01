@@ -1,5 +1,5 @@
 <%@page pageEncoding="UTF-8"%>
-<%@ taglib prefix="j" uri="/WEB-INF/tags/formtag.tld"%>
+<%@ taglib prefix="j" uri="/WEB-INF/tlds/formtag.tld"%>
 <h5 class="pr">
   试卷<a class="btn pa-right" href="javascript:open('${param.itemindex }','${param.contentId }','${param.method}');"><i
     class=icon-plus-sign></i>&nbsp;添加</a>

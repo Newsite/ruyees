@@ -1,5 +1,5 @@
 <%@page pageEncoding="UTF-8"%>
-<%@ taglib prefix="j" uri="/WEB-INF/tags/formtag.tld"%>
+<%@ taglib prefix="j" uri="/WEB-INF/tlds/formtag.tld"%>
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags"%>
 <j:set name="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>

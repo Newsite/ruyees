@@ -128,8 +128,7 @@ public class NotifyService extends BaseService {
 	 */
 	@SuppressWarnings("unchecked")
 	public int getUnreadNotifyCount(String userId) {
-		Finder finder = Finder
-				.create("from NotifyAcceptUser na where na.isRead = :isRead and na.person.fdId = :userId");
+		Finder finder = Finder.create("from NotifyAcceptUser na where na.isRead = :isRead and na.person.fdId = :userId");
 		finder.setParam("isRead", false);
 		finder.setParam("userId", userId);
 

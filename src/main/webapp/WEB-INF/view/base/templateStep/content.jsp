@@ -1,5 +1,5 @@
 <%@page pageEncoding="UTF-8"%>
-<%@ taglib prefix="j" uri="/WEB-INF/tags/formtag.tld"%>
+<%@ taglib prefix="j" uri="/WEB-INF/tlds/formtag.tld"%>
 <h5 class="pr">
   文档<A class="btn pa-right" title=增加
     href="javascript:open('${param.itemindex}','${param.contentId}','${param.method}');"><I class=icon-plus-sign></I>&nbsp;添加</A>

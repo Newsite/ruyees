@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="j" uri="/WEB-INF/tags/formtag.tld"%>
+<%@ taglib prefix="j" uri="/WEB-INF/tlds/formtag.tld"%>
 <j:set name="ctx" value="${pageContext.request.contextPath}" />
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags"%>

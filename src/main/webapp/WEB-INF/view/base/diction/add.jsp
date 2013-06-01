@@ -1,5 +1,5 @@
 <%@page pageEncoding="UTF-8"%>
-<%@ taglib prefix="j" uri="/WEB-INF/tags/formtag.tld"%>
+<%@ taglib prefix="j" uri="/WEB-INF/tlds/formtag.tld"%>
 <j:set name="ctx" value="${pageContext.request.contextPath}" />
 <div id="add-diction" class="modal fade in" tabindex="111" style="display: none;">
   <form class="form-horizontal" method="post" id="inputForm" action="${ctx}/group/diction/save" name="addform">

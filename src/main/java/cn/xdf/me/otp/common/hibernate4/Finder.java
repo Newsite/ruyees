@@ -647,8 +647,7 @@ public class Finder {
 	public static final String ORDER_BY = "order";
 
 	public static void main(String[] args) {
-		Finder find = Finder
-				.create("select distinct p FROM BookType join fetch p");
+		Finder find = Finder.create("select distinct p FROM BookType join fetch p");
 		System.out.println(find.getRowCountHql());
 		System.out.println(find.getOrigHql());
 	}

@@ -1,5 +1,5 @@
 <%@page pageEncoding="UTF-8"%>
-<%@ taglib prefix="j" uri="/WEB-INF/tags/formtag.tld"%>
+<%@ taglib prefix="j" uri="/WEB-INF/tlds/formtag.tld"%>
 <j:ifelse
 	test="${param.stageIndex==1||param.stageIndex==3||param.stageIndex==5 }">
 	<j:then>
