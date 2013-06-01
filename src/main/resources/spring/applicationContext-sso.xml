@@ -12,7 +12,7 @@
 	default-lazy-init="true">
 
 	<!-- E2常量 -->
-	<bean id="ssoToE2Constant" class="cn.xdf.me.otp.sso.e2.constant.SSOToE2Constant">
+	<bean id="ssoToE2Constant" class="ruyees.otp.sso.e2.constant.SSOToE2Constant">
 		<property name="appId" value="202" />
 		<property name="e2AppKey" value="test_a202_AppKey" />
 		<property name="e2AppEn32Key" value="a3_test_test_test_test_test_test" />
@@ -24,15 +24,15 @@
 		<property name="open" value="true"></property>
 	</bean>
 
-	<bean id="ssoLoginService" class="cn.xdf.me.otp.sso.e2.impl.E2LoginServiceImp">
+	<bean id="ssoLoginService" class="ruyees.otp.sso.e2.impl.E2LoginServiceImp">
 		<property name="ssoToE2Constant" ref="ssoToE2Constant" />
 	</bean>
 
-	<bean id="ssoLogoutService" class="cn.xdf.me.otp.sso.e2.impl.E2LogoutServiceImpl">
+	<bean id="ssoLogoutService" class="ruyees.otp.sso.e2.impl.E2LogoutServiceImpl">
 		<property name="ssoToE2Constant" ref="ssoToE2Constant" />
 	</bean>
 
-	<bean id="ssoGetUserFromTokenService" class="cn.xdf.me.otp.sso.e2.impl.E2GetUserFormTokenServiceImpl">
+	<bean id="ssoGetUserFromTokenService" class="ruyees.otp.sso.e2.impl.E2GetUserFormTokenServiceImpl">
 		<property name="ssoToE2Constant" ref="ssoToE2Constant"></property>
 	</bean>
 	
@@ -44,16 +44,16 @@
 		<property name="cacheManager" ref="shiroEhcacheManager" />
 	</bean>
 
-	<bean id="userDao" class="cn.xdf.me.otp.dao.impl.UserDaoImpl"></bean>
+	<bean id="userDao" class="ruyees.otp.dao.impl.UserDaoImpl"></bean>
 
 	<!-- 項目自定义的Realm, 所有accountService依赖的dao都需要用depends-on声明 -->
-	<bean id="shiroDbRealm" class="cn.xdf.me.otp.service.ShiroSsoRealm"
+	<bean id="shiroDbRealm" class="ruyees.otp.service.ShiroSsoRealm"
 		depends-on="userDao">
 		<property name="accountService" ref="accountService" />
 	</bean>
 
-	<bean id="ssoFilter" class="cn.xdf.me.otp.filter.ShiroSsoFilter"></bean>
-	<bean id="ssoLogoutFilter" class="cn.xdf.me.otp.filter.ShirSsoLogoutFilter"></bean>
+	<bean id="ssoFilter" class="ruyees.otp.filter.ShiroSsoFilter"></bean>
+	<bean id="ssoLogoutFilter" class="ruyees.otp.filter.ShirSsoLogoutFilter"></bean>
 
 	<!-- 详细配置请参阅: http://kdboy.iteye.com/blog/1103794 http://kdboy.iteye.com/blog/1154644 
 		http://kdboy.iteye.com/blog/1154652 http://kdboy.iteye.com/blog/1155450 http://kdboy.iteye.com/blog/1169631 

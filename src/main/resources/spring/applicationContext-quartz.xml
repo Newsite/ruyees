@@ -9,6 +9,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd"
 	default-lazy-init="true">
+	
 	<!-- 
 	<task:scheduled-tasks>
 		<task:scheduled ref="notifyTodoQuartz" method="notifyTodo" cron="0 0/2 9-22 * * ? "/>
@@ -28,7 +29,7 @@
 	<bean id="notifyTodoDetail"
 		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
 		<property name="targetObject">
-			<bean class="cn.xdf.me.otp.quartz.NotifyTodoQuartz"></bean>
+			<bean class="ruyees.otp.quartz.NotifyTodoQuartz"></bean>
 		</property>
 		<property name="targetMethod">
 			<value>notifyTodo</value>

@@ -1,4 +1,4 @@
-<%@tag import="cn.xdf.me.otp.utils.ComUtils"%>
+<%@tag import="ruyees.otp.utils.ComUtils"%>
 <%@tag import="org.apache.commons.lang3.StringUtils"%>
 <%@ tag language="java" pageEncoding="UTF-8"%>
 <%@ attribute name="clas" type="java.lang.String" required="true"%>

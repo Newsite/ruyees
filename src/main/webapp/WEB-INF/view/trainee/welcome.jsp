@@ -1,4 +1,4 @@
-<%@page import="cn.xdf.me.otp.model.flow.BamProject"%>
+<%@page import="ruyees.otp.model.flow.BamProject"%>
 <%@page import="java.util.List"%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="j" uri="/WEB-INF/tlds/formtag.tld"%>

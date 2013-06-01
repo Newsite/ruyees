@@ -1,4 +1,4 @@
-<%@page import="cn.xdf.me.otp.utils.PhaseUtils"%>
+<%@page import="ruyees.otp.utils.PhaseUtils"%>
 <%@page pageEncoding="UTF-8"%>
 <script type="text/javascript" src="${ctx}/resources/js/courseware.js"></script>
 <div>

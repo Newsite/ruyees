@@ -1,4 +1,4 @@
-<%@page import="cn.xdf.me.otp.utils.PhaseUtils"%>
+<%@page import="ruyees.otp.utils.PhaseUtils"%>
 <%@page pageEncoding="UTF-8"%>
 <script src="${ctx}/resources/js/grade.js" type="text/javascript"></script>
 <table class="table ">

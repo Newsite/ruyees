@@ -1,5 +1,5 @@
 <%@ tag pageEncoding="UTF-8"%>
-<%@ attribute name="page" type="cn.xdf.me.otp.common.page.Pagination" required="true"%>
+<%@ attribute name="page" type="ruyees.otp.common.page.Pagination" required="true"%>
 <%@ attribute name="paginationSize" type="java.lang.Integer" required="true"%>
 <%@ attribute name="searchParams" type="java.lang.String" required="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>

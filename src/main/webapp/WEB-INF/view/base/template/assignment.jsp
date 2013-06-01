@@ -1,7 +1,7 @@
-<%@page import="cn.xdf.me.otp.service.ShiroDbRealm.ShiroUser"%>
-<%@page import="cn.xdf.me.otp.service.ShiroDbRealm.ShiroUser"%>
-<%@page import="cn.xdf.me.otp.model.sys.RoleEnum"%>
-<%@page import="cn.xdf.me.otp.utils.ShiroUtils"%>
+<%@page import="ruyees.otp.service.ShiroDbRealm.ShiroUser"%>
+<%@page import="ruyees.otp.service.ShiroDbRealm.ShiroUser"%>
+<%@page import="ruyees.otp.model.sys.RoleEnum"%>
+<%@page import="ruyees.otp.utils.ShiroUtils"%>
 <%@page pageEncoding="UTF-8"%>
 <%@ taglib prefix="j" uri="/WEB-INF/tlds/formtag.tld"%>
 <j:set name="ctx" value="${pageContext.request.contextPath}" />

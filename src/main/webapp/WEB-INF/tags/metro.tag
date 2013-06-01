@@ -1,4 +1,4 @@
-<%@tag import="cn.xdf.me.otp.utils.ShiroUtils"%>
+<%@tag import="ruyees.otp.utils.ShiroUtils"%>
 <%@tag import="org.apache.commons.lang3.StringUtils"%>
 <%@ tag language="java" pageEncoding="UTF-8"%>
 <%@ attribute name="href" type="java.lang.String" required="false"%>
