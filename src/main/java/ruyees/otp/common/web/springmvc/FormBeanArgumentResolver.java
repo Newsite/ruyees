@@ -52,6 +52,7 @@ public class FormBeanArgumentResolver implements HandlerMethodArgumentResolver {
 	public static final String BINDING_RESULT_LIST_NAME = "_bindingResultList_";
 
 	private static final String DEFAULT_SEPARATOR = ".";
+	
 	private String separator = DEFAULT_SEPARATOR;
 
 	private WebBindingInitializer webBindingInitializer;
@@ -68,8 +69,7 @@ public class FormBeanArgumentResolver implements HandlerMethodArgumentResolver {
 	}
 
 	@Autowired
-	public void setWebBindingInitializer(
-			WebBindingInitializer webBindingInitializer) {
+	public void setWebBindingInitializer(WebBindingInitializer webBindingInitializer) {
 		this.webBindingInitializer = webBindingInitializer;
 	}
 
@@ -85,8 +85,7 @@ public class FormBeanArgumentResolver implements HandlerMethodArgumentResolver {
 			ModelAndViewContainer mavContainer, NativeWebRequest webRequest,
 			WebDataBinderFactory binderFactory) throws Exception {
 
-		ServletRequest servletRequest = (ServletRequest) webRequest
-				.getNativeRequest();
+		ServletRequest servletRequest = (ServletRequest) webRequest.getNativeRequest();
 
 		PropertyValues pvs = null;
 		Object bindObject = null;
@@ -116,8 +115,7 @@ public class FormBeanArgumentResolver implements HandlerMethodArgumentResolver {
 					if (webBindingInitializer != null) {
 						webBindingInitializer.initBinder(binder, webRequest);
 					}
-					bindObject = binder.convertIfNecessary(targetObject,
-							paramType);
+					bindObject = binder.convertIfNecessary(targetObject, paramType);
 				}
 			}
 		} else if (Map.class.isAssignableFrom(paramType)) {
@@ -150,11 +148,9 @@ public class FormBeanArgumentResolver implements HandlerMethodArgumentResolver {
 			}
 
 		} else {
-			pvs = new ServletRequestParameterPropertyValues(servletRequest,
-					prefix, separator);
+			pvs = new ServletRequestParameterPropertyValues(servletRequest, prefix, separator);
 
-			bindObject = convertIfDomainClass(webRequest, pvs, paramType,
-					prefix);
+			bindObject = convertIfDomainClass(webRequest, pvs, paramType, prefix);
 
 			if (null == bindObject) {
 				bindObject = BeanUtils.instantiateClass(paramType);
@@ -208,7 +204,6 @@ public class FormBeanArgumentResolver implements HandlerMethodArgumentResolver {
 	 * (annotation instanceof FormBean) { return ((FormBean) annotation); } }
 	 * return null; }
 	 */
-
 	private boolean isValid(MethodParameter parameter) {
 		for (Annotation annotation : parameter.getParameterAnnotations()) {
 			if (annotation instanceof Valid) {
@@ -223,10 +218,8 @@ public class FormBeanArgumentResolver implements HandlerMethodArgumentResolver {
 	 */
 	@SuppressWarnings("unchecked")
 	private Map<String, Object> createMappedValues(Class<?> genericClass,
-			NativeWebRequest webRequest, MethodParameter parameter,
-			String prefix) {
-		ServletRequest servletRequest = (ServletRequest) webRequest
-				.getNativeRequest();
+			NativeWebRequest webRequest, MethodParameter parameter, String prefix) {
+		ServletRequest servletRequest = (ServletRequest) webRequest.getNativeRequest();
 		Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
 		WebDataBinder binderHelper = new WebDataBinder(null);
 		if (webBindingInitializer != null) {
@@ -237,18 +230,15 @@ public class FormBeanArgumentResolver implements HandlerMethodArgumentResolver {
 		for (String key : keySet) {
 			Object genericObj = null;
 			if (key.endsWith(separator)) {
-				ServletRequestParameterPropertyValues pvs = new ServletRequestParameterPropertyValues(
-						servletRequest, key, StringUtils.EMPTY);
+				ServletRequestParameterPropertyValues pvs = new ServletRequestParameterPropertyValues(servletRequest, key, StringUtils.EMPTY);
 
 				String realKey = key.substring(0, key.length() - 1);
-				genericObj = convertIfDomainClass(webRequest, pvs,
-						genericClass, realKey);
+				genericObj = convertIfDomainClass(webRequest, pvs, genericClass, realKey);
 				if (null == genericObj) {
 					genericObj = BeanUtils.instantiateClass(genericClass);
 				}
 
-				WebDataBinder objectBinder = new WebDataBinder(genericObj,
-						realKey);
+				WebDataBinder objectBinder = new WebDataBinder(genericObj, realKey);
 				if (webBindingInitializer != null) {
 					webBindingInitializer.initBinder(objectBinder, webRequest);
 				}
@@ -257,29 +247,22 @@ public class FormBeanArgumentResolver implements HandlerMethodArgumentResolver {
 				// 如果有校验注解@Valid，则校验绑定，通过Request传递校验结果
 				if (isValid(parameter)) {
 					objectBinder.validate();
-					BindingResult bindingResult = objectBinder
-							.getBindingResult();
+					BindingResult bindingResult = objectBinder.getBindingResult();
 
-					List<BindingResult> list = (List<BindingResult>) webRequest
-							.getAttribute(BINDING_RESULT_LIST_NAME, 0);
+					List<BindingResult> list = (List<BindingResult>) webRequest.getAttribute(BINDING_RESULT_LIST_NAME, 0);
 					if (null == list) {
 						list = new ArrayList<BindingResult>();
-						webRequest.setAttribute(BINDING_RESULT_LIST_NAME, list,
-								0);
+						webRequest.setAttribute(BINDING_RESULT_LIST_NAME, list, 0);
 					}
 					list.add(bindingResult);
 				}
 			} else {
-				Map<String, Object> paramValues = WebUtils
-						.getParametersStartingWith(servletRequest, key);
+				Map<String, Object> paramValues = WebUtils.getParametersStartingWith(servletRequest, key);
 				if (!paramValues.isEmpty()) {
 					if (Collection.class.isAssignableFrom(genericClass)) {
-						genericObj = binderHelper.convertIfNecessary(
-								paramValues.values(), genericClass);
+						genericObj = binderHelper.convertIfNecessary(paramValues.values(), genericClass);
 					} else {
-						genericObj = binderHelper.convertIfNecessary(
-								paramValues.values().iterator().next(),
-								genericClass);
+						genericObj = binderHelper.convertIfNecessary(paramValues.values().iterator().next(), genericClass);
 					}
 				}
 			}
@@ -318,6 +301,7 @@ public class FormBeanArgumentResolver implements HandlerMethodArgumentResolver {
 	}
 
 	private static final class ComparatorImpl implements Comparator<String> {
+		
 		public static final ComparatorImpl INSTANCE = new ComparatorImpl();
 
 		public int compare(String left, String right) {
@@ -337,8 +321,7 @@ public class FormBeanArgumentResolver implements HandlerMethodArgumentResolver {
 			if (null != idValue) {
 				String idString = (String) idValue.getValue();
 				if (StringUtils.isNotEmpty(idString)) {
-					WebDataBinder binder = new WebDataBinder(null, prefix
-							+ separator + "id");
+					WebDataBinder binder = new WebDataBinder(null, prefix + separator + "id");
 					if (webBindingInitializer != null) {
 						webBindingInitializer.initBinder(binder, webRequest);
 					}
